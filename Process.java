@@ -21,7 +21,8 @@ public class Process {
         waitingForIO,
         done
     }
-    Process.State processState = State.ready;
+
+    public State processState;
 
     Process(int pid, int arrivalTime, int burstTime, int ioStartTime, int ioDuration, int priority){
         this.pid = pid;
@@ -30,6 +31,25 @@ public class Process {
         this.ioStartTime = ioStartTime;
         this.ioDuration = ioDuration;
         this.priority = priority;
+        this.processState = State.ready;
+    }
+
+    @Override
+    public String toString() {
+        return "P" + pid;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Process process = (Process) obj;
+        return pid == process.pid;
+    }
+
+    @Override
+    public int hashCode() {
+        return pid;
     }
 
 }
