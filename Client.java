@@ -14,6 +14,8 @@ public class Client {
         SimulationEngine engine = new SimulationEngine(fcfs);
         engine.start(fcfsList);
 
+
+
         System.out.println("\n");
 
         List<Process> rrList = new ArrayList<>();
@@ -25,9 +27,18 @@ public class Client {
         SimulationEngine engine2 = new SimulationEngine(rr);
         engine2.start(rrList);
 
-        // Scheduler scheduler = new Priority();
 
-            //Create a new simulation Engine and start running the processes
+
+        System.out.println("\n");
+
+        List<Process> priList = new ArrayList<>();
+        priList.add(new Process(1, 0, 10, 2, 3, 5));
+        priList.add(new Process(2, 2, 6, 1, 2, 9));
+        priList.add(new Process(3, 4, 8, 3, 1, 3));
+
+        Scheduler priScheduler = new Priority();
+        SimulationEngine engine3 = new SimulationEngine(priScheduler);
+        engine3.start(priList);
         
     }
 
