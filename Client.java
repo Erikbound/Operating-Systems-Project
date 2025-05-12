@@ -13,6 +13,10 @@ public class Client {
 
         Scheduler scheduler = new FCFS();
 
+        //The other 2 schedulers
+        // Scheduler scheduler = new RR();
+        // Scheduler scheduler = new Priority();
+
             //Create a new simulation Engine and start running the processes
         SimulationEngine engine = new SimulationEngine(scheduler);
         engine.start(processList);
