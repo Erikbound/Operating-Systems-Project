@@ -22,7 +22,7 @@ public class Client {
             //Generates random values for 20 processes
         Random rand = new Random();
         
-        for (int i = 0; i < 19; i++) {
+        for (int i = 0; i < 20; i++) {
             int aTime = rand.nextInt(30);            // Arrival time between 0–29
             int burst = rand.nextInt(5) + 5;         // Burst time between 5–9
             int ioStart = rand.nextInt(burst - 1);   // I/O start between 0 and burst-2
@@ -55,7 +55,7 @@ public class Client {
         rrList.clear();
 
             //Generates random values for 20 processes
-        for (int i = 0; i < 19; i++) {
+        for (int i = 0; i < 20; i++) {
             int aTime = rand.nextInt(30);            // Arrival time between 0–29
             int burst = rand.nextInt(5) + 5;         // Burst time between 5–9
             int ioStart = rand.nextInt(burst - 1);   // I/O start between 0 and burst-2
@@ -87,7 +87,7 @@ public class Client {
         priList.clear();
 
             //Generates random values for 20 processes
-        for (int i = 0; i < 19; i++) {
+        for (int i = 0; i < 20; i++) {
             int aTime = rand.nextInt(30);            // Arrival time between 0–29
             int burst = rand.nextInt(5) + 5;         // Burst time between 5–9
             int ioStart = rand.nextInt(burst - 1);   // I/O start between 0 and burst-2
