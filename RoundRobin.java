@@ -22,7 +22,7 @@ public class RoundRobin implements Scheduler {
 
     @Override
     public void run(List<Process> processes) {
-        System.out.println("Starting Round Robin Sim...");
+        System.out.println("Starting Round Robin Sim with time quantum = " + timeQuantum);
         this.processList = processes;
         Set<Process> finishedProcesses = new HashSet<>();
 
